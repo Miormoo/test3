@@ -4,6 +4,7 @@ trying to get VBA code as a repository
 Sub power_export()
 
     Application.ScreenUpdating = False
+    Dim change as int
     Dim var as variant
     Dim oWSS As Object
     Dim oPPTApp As Object
