@@ -1,0 +1,29 @@
+#title : latest_dates.py
+#description : Outputs the date and time a specific database was last modified.
+#author : Maria Langslow
+#date : 20160210
+#codename : DATE 
+#copyright : Copyright 2016, Wessex Insights
+
+import argparse
+import os.path,time
+import datetime
+
+def find(name,path):
+    for root,dirs,files in os.walk(path):
+        if name in files:
+            return os.path.join(root,name)
+
+def Main():
+    parser=argparse.ArgumentParser()
+    
+    #Manufacturer can be J&J or Kraft - has to be spelled correctly!
+    parser.add_argument("manu",help="Specify the manufacturer of the database.")
+    parser.add_argument("market",help="Specify the market of the database.")
+    parser.add_argument("code",help="Specify the codename of the database.")
+    
+    args=parser.parse_args()
+    
+    file = find(str(args.code)+".CHR","B:\Nielsen Databases\"+str(args.manu)+"\"+str(args.market))
+                
+    print "last modified: %s" "time.ctime(os.path.getmtime(file))
