@@ -20,6 +20,12 @@ Sub power_export()
     intFlag = 0
     Call invisible
     
+    If change = True then
+        do a thing with another thing
+    Else
+        do something else
+    End if
+    
     If Dir(filName) = "" Then
         Set oPPTApp = CreateObject("PowerPoint.Application")
         intFlag = 1
