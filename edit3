@@ -38,7 +38,7 @@ Sub power_export()
     End If
     
     If oPPTPres.Slides.count = 0 Then
-        Set oSlide = oPPTPres.Slides.Add(1, 15)
+        Set oSlide = 2
     Else
         Set oSlide = oPPTPres.Slides.Add(oPPTPres.Slides.count + 1, 15)
         oPPTPres.Slides(oPPTPres.Slides.count).Select
