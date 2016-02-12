@@ -22,7 +22,6 @@ Sub power_export()
     
     If Dir(filName) = "" Then
         Set oPPTApp = CreateObject("PowerPoint.Application")
-        intFlag = 1
         oPPTApp.visible = True
         Set oPPTPres = oPPTApp.presentations.Add(msoTrue)
     Else
