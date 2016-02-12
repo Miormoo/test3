@@ -1,7 +1,10 @@
 # test3
 trying to get VBA code as a repository
+
 Sub power_export()
+
     Application.ScreenUpdating = False
+    Dim var as variant
     Dim oWSS As Object
     Dim oPPTApp As Object
     Dim oPPTPres As Object
@@ -68,4 +71,5 @@ Sub power_export()
     Set oPPTApp = Nothing
     Call visible
     Application.ScreenUpdating = True
+    
 End Sub
